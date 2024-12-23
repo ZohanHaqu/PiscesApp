@@ -1,0 +1,31 @@
+﻿<Window x:Class="Pisces.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pisces Text Editor" Height="450" Width="800">
+    <Grid>
+        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="File">
+                <MenuItem Header="New" Click="NewFile_Click"/>
+                <MenuItem Header="Open" Click="OpenFile_Click"/>
+                <MenuItem Header="Save" Click="SaveFile_Click"/>
+            </MenuItem>
+            <MenuItem Header="View">
+                <MenuItem Header="View File" Click="ViewFile_Click"/>
+            </MenuItem>
+            <MenuItem Header="Add">
+                <MenuItem Header="Combine Files" Click="CombineFiles_Click"/>
+            </MenuItem>
+            <MenuItem Header="Open System Code" Click="OpenSystemCode_Click"/>
+        </Menu>
+        <RichTextBox x:Name="Editor" Grid.Row="1" Margin="10" VerticalScrollBarVisibility="Auto"/>
+    </Grid>
+</Window>
+
+
+
